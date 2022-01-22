@@ -15,3 +15,9 @@ This is a test repo to see how both gulp and baylon work
 1. run `npm install`
 1. start `gulp sync`
 1. open your webbrowser localy to <http://localhost:3000/>
+
+## doco
+
+<https://doc.babylonjs.com/extensions/babylonViewer>
+<https://playground.babylonjs.com/>
+<https://codepen.io/BabylonJS/pen/QxzBPd/>

@@ -19,7 +19,7 @@ function generateCSS(cb) {
 function generateHTML(cb) {
     src("./views/index.ejs")
         .pipe(ejs({
-            title: "Onzyone Test based",
+            title: "Onzyone Test Bed, from gulpfile.js",
         }))
         .pipe(rename({
             extname: ".html"
@@ -27,6 +27,15 @@ function generateHTML(cb) {
         .pipe(dest("public"));
     cb();
 }
+
+function copyGLB(cb) {
+  src('./glb/**/*.glb')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(dest('public/glb'))
+      .pipe(sync.stream());
+  cb();
+}
+
 
 function runLinter(cb) {
     return src(['**/*.js', '!node_modules/**'])
@@ -52,6 +61,7 @@ function runTests(cb) {
 function watchFiles(cb) {
     watch('views/**.ejs', generateHTML);
     watch('sass/**.scss', generateCSS);
+    watch('glb/**.glb', copyGLB);
     watch([ '**/*.js', '!node_modules/**'], parallel(runLinter, runTests));
 }
 
@@ -69,6 +79,7 @@ function browserSync(cb) {
 
 exports.css = generateCSS;
 exports.html = generateHTML;
+exports.glb = copyGLB;
 exports.lint = runLinter;
 exports.test = runTests;
 exports.watch = watchFiles;
