@@ -6,10 +6,10 @@ This is a test repo to see how both gulp and baylon work
 <!--ts-->
   * [node-babylon-set](#node-babylon-set)
   * [Table of contents](#table-of-contents)
-  * [isntall](#isntall)
+  * [Install](#Install)
 <!--te-->
 
-## isntall
+## Install
 
 1. clone this repo `git clone git@github.com:onzyone/node-babylon-setup.git; cd node-babylon-setup`
 1. run `npm install`
