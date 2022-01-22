@@ -19,7 +19,7 @@ function generateCSS(cb) {
 function generateHTML(cb) {
     src("./views/index.ejs")
         .pipe(ejs({
-            title: "Hello Semaphore CI!",
+            title: "Onzyone Test based",
         }))
         .pipe(rename({
             extname: ".html"

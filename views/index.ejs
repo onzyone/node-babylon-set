@@ -2,10 +2,12 @@
 <html>
   <head>
     <title><%= title %></title>
+    <script src="https://preview.babylonjs.com/viewer/babylon.viewer.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <babylon model="https://models.babylonjs.com/boombox.glb" templates.main.params.fill-screen="true"></babylon>
   </body>
 </html>
